@@ -1,0 +1,755 @@
+# QUIZ APP
+
+questions = [
+    "Who was the first President of the United States?",
+    "In which year did World War II end?",
+    "Who discovered America in 1492?",
+    "What was the name of the ship that carried the Pilgrims to America in 1620?",
+    "Who was the first woman to win a Nobel Prize?",
+    "What is the capital of Australia?",
+    "Which is the longest river in the world?",
+    "In which country would you find the Eiffel Tower?",
+    "What is the smallest country in the world by area?",
+    "Mount Everest is located in which two countries?",
+    "What is the chemical symbol for gold?",
+    "What is the powerhouse of the cell?",
+    "How many bones are there in the adult human body?",
+    "What gas do plants absorb during photosynthesis?",
+    "Which planet is known as the 'Red Planet'?",
+    "Who is known as the father of computers?",
+    "What does 'HTTP' stand for in a website address?",
+    "Which company developed the first iPhone?",
+    "What year was the first email sent?",
+    "Who invented the light bulb?",
+    "Which sport is known as the 'king of sports'?",
+    "How many players are on a standard soccer team?",
+    "Who has won the most Olympic gold medals?",
+    "In which country did the Olympic Games originate?",
+    "What is the national sport of Japan?",
+    "Who wrote the play Romeo and Juliet?",
+    "What is the name of Harry Potter’s pet owl?",
+    "Which movie won the Oscar for Best Picture in 2023?",
+    "What is the highest-grossing movie of all time?",
+    "Who created the famous detective Sherlock Holmes?",
+    "Which country hosted the FIFA World Cup 2022?",
+    "Who is the current Secretary-General of the United Nations?",
+    "What is the currency of Japan?",
+    "Which country has the highest population?",
+    "What does GDP stand for in economics?",
+    "What is the hardest natural substance on Earth?",
+    "How many continents are there in the world?",
+    "What is the main ingredient in guacamole?",
+    "What is the national flower of Pakistan?",
+    "Which ocean is the largest?",
+    "In Greek mythology, who is the king of the gods?",
+    "Which religion follows the teachings of the Quran?",
+    "Who was the founder of Buddhism?",
+    "What is the Hindu festival of lights called?",
+    "In Norse mythology, which god wields Mjölnir?",
+    "What is the only fruit that has its seeds on the outside?",
+    "What letter comes after 'E' in the English alphabet?",
+    "How many months have 28 days?",
+    "What color is an emerald?",
+    "What comes next in the sequence: Monday, Tuesday, Wednesday, ___?"
+]
+options = [
+    ["A) Thomas Jefferson",
+     "B) George Washington",
+     "C) Abraham Lincoln",
+     "D) John Adams"],
+
+    ["A) 1940",
+     "B) 1943",
+     "C) 1945",
+     "D) 1950"],
+
+    ["A) Mayflower",
+     "B) Titanic",
+     "C) Santa Maria",
+     "D) Victory"],
+
+    ["A) Marie Curie",
+     "B) Jane Goodall",
+     "C) Rosalind Franklin",
+     "D) Mother Teresa"],
+
+    ["A) Sydney",
+     "B) Melbourne",
+     "C) Canberra",
+     "D) Perth"],
+
+    ["A) Amazon",
+     "B) Nile",
+     "C) Yangtze",
+     "D) Mississippi"],
+
+    ["A) Italy",
+     "B) Germany",
+     "C) France",
+     "D) Spain"],
+
+    ["A) Monaco",
+     "B) Vatican City",
+     "C) Liechtenstein",
+     "D) Malta"],
+
+    ["A) India and Nepal",
+     "B) China and Nepal",
+     "C) Pakistan and India",
+     "D) China and Bhutan"],
+
+    ["A) Ag",
+     "B) Au",
+     "C) Pb",
+     "D) Fe"],
+
+    ["A) Nucleus",
+     "B) Mitochondria",
+     "C) Ribosome",
+     "D) Cytoplasm"],
+
+    ["A) 200",
+     "B) 206",
+     "C) 210",
+     "D) 180"],
+
+    ["A) Oxygen",
+     "B) Hydrogen",
+     "C) Carbon Dioxide",
+     "D) Nitrogen"],
+
+    ["A) Mercury",
+     "B) Venus",
+     "C) Mars",
+     "D) Jupiter"],
+
+    ["A) Charles Babbage",
+     "B) Alan Turing",
+     "C) Bill Gates",
+     "D) Steve Jobs"],
+
+    ["A) HyperText Transfer Protocol",
+     "B) High Tech Transfer Protocol",
+     "C) Hyper Transfer Text Protocol",
+     "D) Host Text Transfer Protocol"],
+
+    ["A) Samsung",
+     "B) Apple",
+     "C) Microsoft",
+     "D) Nokia"],
+
+    ["A) 1965",
+     "B) 1971",
+     "C) 1980",
+     "D) 1995"],
+
+    ["A) Alexander Graham Bell",
+     "B) Nikola Tesla",
+     "C) Thomas Edison",
+     "D) Benjamin Franklin"],
+
+    ["A) Cricket",
+     "B) Basketball",
+     "C) Soccer (Football)",
+     "D) Tennis"],
+
+    ["A) 9",
+     "B) 10",
+     "C) 11",
+     "D) 12"],
+
+    ["A) Usain Bolt",
+     "B) Michael Phelps",
+     "C) Carl Lewis",
+     "D) Serena Williams"],
+
+    ["A) Italy",
+     "B) Greece",
+     "C) France",
+     "D) China"],
+
+    ["A) Karate",
+     "B) Judo",
+     "C) Sumo Wrestling",
+     "D) Baseball"],
+
+    ["A) William Shakespeare",
+     "B) Charles Dickens",
+     "C) Jane Austen",
+     "D) Mark Twain"],
+
+    ["A) Hedwig",
+     "B) Crookshanks",
+     "C) Buckbeak",
+     "D) Fawkes"],
+
+    ["A) Top Gun: Maverick",
+     "B) Everything Everywhere All at Once",
+     "C) Avatar: The Way of Water",
+     "D) The Fabelmans"],
+
+    ["A) Titanic",
+     "B) Avengers: Endgame",
+     "C) Avatar",
+     "D) The Lion King"],
+
+    ["A) Agatha Christie",
+     "B) Arthur Conan Doyle",
+     "C) Edgar Allan Poe",
+     "D) Charles Dickens"],
+
+    ["A) Qatar",
+     "B) France",
+     "C) Brazil",
+     "D) Germany"
+     ],
+    ["A) Ban Ki-moon",
+     "B) Kofi Annan",
+     "C) António Guterres",
+     "D) Jens Stoltenberg"],
+
+    ["A) Yen",
+     "B) Won",
+     "C) Ringgit",
+     "D) Baht"],
+
+    ["A) India",
+     "B) China",
+     "C) USA",
+     "D) Indonesia"],
+
+    ["A) Gross Domestic Product",
+     "B) General Development Plan",
+     "C) Government Development Program",
+     "D) Global Dollar Production"],
+
+    ["A) Iron",
+     "B) Gold",
+     "C) Diamond",
+     "D) Titanium"
+     ],
+    ["A) 5",
+     "B) 6",
+     "C) 7",
+     "D) 8"],
+
+    ["A) Tomato",
+     "B) Avocado",
+     "C) Cucumber",
+     "D) Lettuce"],
+
+    ["A) Tulip",
+     "B) Rose",
+     "C) Jasmine",
+     "D) Sunflower"],
+
+    ["A) Atlantic Ocean",
+     "B) Indian Ocean",
+     "C) Arctic Ocean",
+     "D) Pacific Ocean"],
+
+    ["A) Poseidon",
+     "B) Zeus",
+     "C) Hades",
+     "D) Apollo"],
+
+    ["A) Hinduism",
+     "B) Christianity",
+     "C) Islam",
+     "D) Buddhism"],
+
+    ["A) Confucius",
+     "B) Mahavira",
+     "C) Siddhartha Gautama",
+     "D) Laozi"],
+
+    ["A) Holi",
+     "B) Diwali",
+     "C) Navratri",
+     "D) Raksha Bandhan"],
+
+    ["A) Odin",
+     "B) Loki",
+     "C) Thor",
+     "D) Freyr"],
+
+    ["A) Banana",
+     "B) Strawberry",
+     "C) Apple",
+     "D) Blueberry"],
+
+    ["A) D",
+     "B) F",
+     "C) G",
+     "D) H"],
+
+    ["A) 1",
+     "B) 6",
+     "C) 12",
+     "D) 4"],
+
+    ["A) Red",
+     "B) Blue",
+     "C) Green",
+     "D) Yellow"],
+
+    ["A) Friday",
+     "B) Thursday",
+     "C) Sunday",
+     "D) Saturday"]
+]
+
+answer = ["A", "B", "A", "A", "A", "B", "B", "B", "C", "B", "B", "B", "B", "C", "C", "A", "A", "B", "B", "C", "C", "C",
+          "B", "B", "C", "A", "A", "B", "C", "B", "A", "C", "A", "B", "C", "C", "B", "B", "C", "D", "B", "C", "C", "B",
+          "C", "B", "B", "C", "C", "B"]
+
+# Question 1
+print(questions[0])  # Print question 1
+for option in options[0]:  # Loop through all options and print them one by one
+    print(option)  # Print each option separately
+if input("Your answer (A-D): ") == answer[0]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[0])
+
+# Question 2
+print(questions[1])
+for option in options[1]:
+    print(option)
+if input("Your answer (A-D): ") == answer[1]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[1])
+
+# Question 3
+print(questions[2])
+for option in options[2]:
+    print(option)
+if input("Your answer (A-D): ") == answer[2]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[2])
+
+# Question 4
+print(questions[3])
+for option in options[3]:
+    print(option)
+if input("Your answer (A-D): ") == answer[3]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[3])
+
+# Question 5
+print(questions[4])
+for option in options[4]:
+    print(option)
+if input("Your answer (A-D): ") == answer[4]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[4])
+
+# Question 6
+print(questions[5])
+for option in options[5]:
+    print(option)
+if input("Your answer (A-D): ") == answer[5]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[5])
+
+# Question 7
+print(questions[6])
+for option in options[6]:
+    print(option)
+if input("Your answer (A-D): ") == answer[6]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[6])
+
+# Question 8
+print(questions[7])
+for option in options[7]:
+    print(option)
+if input("Your answer (A-D): ") == answer[7]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[7])
+
+# Question 9
+print(questions[8])
+for option in options[8]:
+    print(option)
+if input("Your answer (A-D): ") == answer[8]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[8])
+
+# Question 10
+print(questions[9])
+for option in options[9]:
+    print(option)
+if input("Your answer (A-D): ") == answer[9]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[9])
+
+# Question 11
+print(questions[10])
+for option in options[10]:
+    print(option)
+if input("Your answer (A-D): ") == answer[10]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[10])
+
+# Question 12
+print(questions[11])
+for option in options[11]:
+    print(option)
+if input("Your answer (A-D): ") == answer[11]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[11])
+
+# Question 13
+print(questions[12])
+for option in options[12]:
+    print(option)
+if input("Your answer (A-D): ") == answer[12]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[12])
+
+# Question 14
+print(questions[13])
+for option in options[13]:
+    print(option)
+if input("Your answer (A-D): ") == answer[13]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[13])
+
+# Question 15
+print(questions[14])
+for option in options[14]:
+    print(option)
+if input("Your answer (A-D): ") == answer[14]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[14])
+
+# Question 16
+print(questions[15])
+for option in options[15]:
+    print(option)
+if input("Your answer (A-D): ") == answer[15]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[15])
+
+# Question 17
+print(questions[16])
+for option in options[16]:
+    print(option)
+if input("Your answer (A-D): ") == answer[16]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[16])
+
+# Question 18
+print(questions[17])
+for option in options[17]:
+    print(option)
+if input("Your answer (A-D): ") == answer[17]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[17])
+
+# Question 19
+print(questions[18])
+for option in options[18]:
+    print(option)
+if input("Your answer (A-D): ") == answer[18]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[18])
+
+# Question 20
+print(questions[19])
+for option in options[19]:
+    print(option)
+if input("Your answer (A-D): ") == answer[19]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[19])
+
+# Question 21
+print(questions[20])
+for option in options[20]:
+    print(option)
+if input("Your answer (A-D): ") == answer[20]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[20])
+
+# Question 22
+print(questions[21])
+for option in options[21]:
+    print(option)
+if input("Your answer (A-D): ") == answer[21]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[21])
+
+# Question 23
+print(questions[22])
+for option in options[22]:
+    print(option)
+if input("Your answer (A-D): ") == answer[22]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[22])
+
+# Question 24
+print(questions[23])
+for option in options[23]:
+    print(option)
+if input("Your answer (A-D): ") == answer[23]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[23])
+
+# Question 25
+print(questions[24])
+for option in options[24]:
+    print(option)
+if input("Your answer (A-D): ") == answer[24]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[24])
+
+# Question 26
+print(questions[25])
+for option in options[25]:
+    print(option)
+if input("Your answer (A-D): ") == answer[25]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[25])
+
+# Question 27
+print(questions[26])
+for option in options[26]:
+    print(option)
+if input("Your answer (A-D): ") == answer[26]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[26])
+
+# Question 28
+print(questions[27])
+for option in options[27]:
+    print(option)
+if input("Your answer (A-D): ") == answer[27]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[27])
+
+# Question 29
+print(questions[28])
+for option in options[28]:
+    print(option)
+if input("Your answer (A-D): ") == answer[28]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[28])
+
+# Question 30
+print(questions[29])
+for option in options[29]:
+    print(option)
+if input("Your answer (A-D): ") == answer[29]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[29])
+
+# Question 31
+print(questions[30])
+for option in options[30]:
+    print(option)
+if input("Your answer (A-D): ") == answer[30]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[30])
+
+# Question 32
+print(questions[31])
+for option in options[31]:
+    print(option)
+if input("Your answer (A-D): ") == answer[31]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[31])
+
+# Question 33
+print(questions[32])
+for option in options[32]:
+    print(option)
+if input("Your answer (A-D): ") == answer[32]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[32])
+
+# Question 34
+print(questions[33])
+for option in options[33]:
+    print(option)
+if input("Your answer (A-D): ") == answer[33]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[33])
+
+# Question 35
+print(questions[34])
+for option in options[34]:
+    print(option)
+if input("Your answer (A-D): ") == answer[34]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[34])
+
+# Question 36
+print(questions[35])
+for option in options[35]:
+    print(option)
+if input("Your answer (A-D): ") == answer[35]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[35])
+
+# Question 37
+print(questions[36])
+for option in options[36]:
+    print(option)
+if input("Your answer (A-D): ") == answer[36]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[36])
+
+# Question 38
+print(questions[37])
+for option in options[37]:
+    print(option)
+if input("Your answer (A-D): ") == answer[37]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[37])
+
+# Question 39
+print(questions[38])
+for option in options[38]:
+    print(option)
+if input("Your answer (A-D): ") == answer[38]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[38])
+
+# Question 40
+print(questions[39])
+for option in options[39]:
+    print(option)
+if input("Your answer (A-D): ") == answer[39]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[39])
+
+# Question 41
+print(questions[40])
+for option in options[40]:
+    print(option)
+if input("Your answer (A-D): ") == answer[40]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[40])
+
+
+# Question 42
+print(questions[41])
+for option in options[41]:
+    print(option)
+if input("Your answer (A-D): ") == answer[41]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[41])
+
+# Question 43
+print(questions[42])
+for option in options[42]:
+    print(option)
+if input("Your answer (A-D): ") == answer[42]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[42])
+
+# Question 44
+print(questions[43])
+for option in options[43]:
+    print(option)
+if input("Your answer (A-D): ") == answer[43]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[43])
+
+# Question 45
+print(questions[44])
+for option in options[44]:
+    print(option)
+if input("Your answer (A-D): ") == answer[44]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[44])
+
+# Question 46
+print(questions[45])
+for option in options[45]:
+    print(option)
+if input("Your answer (A-D): ") == answer[45]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[45])
+
+# Question 47
+print(questions[46])
+for option in options[46]:
+    print(option)
+if input("Your answer (A-D): ") == answer[46]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[46])
+
+# Question 48
+print(questions[47])
+for option in options[47]:
+    print(option)
+if input("Your answer (A-D): ") == answer[47]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[47])
+
+# Question 49
+print(questions[48])
+for option in options[48]:
+    print(option)
+if input("Your answer (A-D): ") == answer[48]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[48])
+
+# Question 50
+print(questions[49])
+for option in options[49]:
+    print(option)
+if input("Your answer (A-D): ") == answer[49]:
+    print("Correct!")
+else:
+    print("Wrong! Correct answer is", answer[49])
